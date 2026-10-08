@@ -16,7 +16,7 @@ int main(){
         int narrow = divv;
         printf("int: %d\n", div);
         printf("float: %.3f\n", double(a)/b);
-        printf("narrow: %d\n", narrow);
+        printf("сужение: %d\n", narrow);
         return 0;
     }
 }

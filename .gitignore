@@ -1,0 +1,65 @@
+# ==========================================
+# Исполняемые файлы и бинарники Windows / C / C++
+# ==========================================
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+
+# Папки сборки и временные каталоги
+build/
+bin/
+out/
+obj/
+dist/
+cmake-build-*/
+
+# Файлы отладки и дампы
+*.pdb
+*.ilk
+*.dSYM/
+*.gch
+*.pch
+
+# ==========================================
+# Настройки редакторов и IDE
+# ==========================================
+# VS Code (игнорируем локальные конфиги, кроме рекомендуемых расширений)
+.vscode/*
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# CLion / Rider / JetBrains IDE
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ==========================================
+# Логи и системный мусор
+# ==========================================
+*.log
+*.tmp
+*.temp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
