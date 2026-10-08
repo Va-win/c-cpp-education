@@ -7,5 +7,6 @@ int main()
     int tm = h*60 + m;
     int s = h*3600 + m*60;// вычислить
     printf("%d\n%d\n", tm, s);// напечатать результат
+    printf("check\n");
     return 0;
 }
