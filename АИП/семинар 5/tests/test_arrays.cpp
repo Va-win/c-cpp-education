@@ -122,3 +122,14 @@ TEST(MergeSorted, EmptySide) {
 
 // Свой тест допишите здесь: результат слияния не помещается в out.
 // Образцы – TEST(MergeSorted, Example) и TEST(MinMax, TooShort), слайд «Свой тест».
+
+TEST(MergeSorted, OutTooSmall) {
+    const int a[] = {1, 4, 9};
+    const int b[] = {2, 4, 10, 11};
+    int out[5] = {0, 0, 0, 0, 0};
+
+    EXPECT_EQ(merge_sorted(a, 3, b, 4, out, 5), -1);
+
+    const int expect[] = {0, 0, 0, 0, 0};
+    ExpectPrefix(out, expect, 5);
+}
