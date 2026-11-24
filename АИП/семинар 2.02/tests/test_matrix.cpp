@@ -128,5 +128,13 @@ TEST(Transpose, DoesNotFit) {
     }
 }
 
+TEST(ElementPtr, LastOfPartial) {
+    int a[ROWS][COLS] = {};
+    FillPartial(a);
+    ASSERT_EQ(element_ptr(a, 2, 3), &a[2][3]);
+    ASSERT_EQ(element_ptr(a, 2, 3), &a[0][0] + 13);
+    EXPECT_EQ(*element_ptr(a, 2, 3), 12);
+}
+
 // Свой тест допишите здесь: element_ptr для последнего элемента занятой части 3 x 4.
 // Образцы: TEST(ElementPtr, Middle) и TEST(ElementPtr, RowStart), слайд «Свой тест».

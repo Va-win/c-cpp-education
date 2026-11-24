@@ -30,9 +30,12 @@ void print_matrix(const int a[][COLS], int rows, int cols) {
 }
 
 void print_addresses(int a[][COLS]) {
-    // TODO: напечатать &a[0][0], a[0] + 1, a + 1, &a[1][2],
-    // разность &a[1][2] - &a[0][0] и sizeof(a[0]), слайд «Что печатает print_addresses»
-    (void)a;
+    std::cout << "&a[0][0] = " << &a[0][0] << '\n';
+    std::cout << "a[0] + 1 = " << a[0] + 1 << '\n';
+    std::cout << "a + 1    = " << a + 1 << '\n';
+    std::cout << "&a[1][2] = " << &a[1][2] << '\n';
+    std::cout << "&a[1][2] - &a[0][0] = " << (&a[1][2] - &a[0][0]) << '\n';
+    std::cout << "sizeof(a[0]) = " << sizeof(a[0]) << '\n';
 }
 
 int main() {
