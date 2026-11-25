@@ -139,5 +139,19 @@ TEST(ClearZero, Tail) {
     EXPECT_EQ(a[1][1], 4);
 }
 
+TEST(ClearZero, SameRow) {
+    int a[ROWS][COLS] = {
+        {0, 1, 0},
+        {2, 3, 4}
+    };
+    EXPECT_TRUE(clear_zero_rows_cols(a, 2, 3));
+    EXPECT_EQ(a[0][0], 0);
+    EXPECT_EQ(a[0][1], 0);
+    EXPECT_EQ(a[0][2], 0);
+    EXPECT_EQ(a[1][0], 0);
+    EXPECT_EQ(a[1][1], 3);
+    EXPECT_EQ(a[1][2], 0);
+}
+
 // Свой тест допишите здесь: TEST(ClearZero, SameRow), матрица 2 x 3 из строк 0 1 0 и 2 3 4.
 // Ожидание и образец: слайд «Два нуля в одной строке», TEST(ClearZero, Example).

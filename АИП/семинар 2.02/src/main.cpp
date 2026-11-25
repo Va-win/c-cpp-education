@@ -3,6 +3,10 @@
 
 #include "matrix.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 bool read_matrix(int a[][COLS], int* rows, int* cols) {
     if (!(std::cin >> *rows >> *cols)) {
         return false;
@@ -39,6 +43,10 @@ void print_addresses(int a[][COLS]) {
 }
 
 int main() {
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    #endif
     int a[ROWS][COLS] = {};
     int rows = 0;
     int cols = 0;
